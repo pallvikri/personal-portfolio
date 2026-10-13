@@ -1,0 +1,147 @@
+body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .heading-font {
+            font-family: 'Syne', sans-serif;
+        }
+
+        /* Left-Right Scroll Slide Animations */
+        .slide-in-left {
+            opacity: 0;
+            transform: translate3d(-50px, 0, 0);
+            transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translate3d(50px, 0, 0);
+            transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+        }
+
+        .slide-in-left.active, .slide-in-right.active {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+
+        /* Stylish Dashed Outer Border Frame */
+        /* .dashed-border-frame {
+            position: relative;
+        }
+
+        .dashed-border-frame::before {
+            content: '';
+            position: absolute;
+            inset: -10px;
+            border: 2px dashed #6366f1;
+            border-radius: 1.25rem;
+            transform: rotate(-2deg);
+            opacity: 0.7;
+            pointer-events: none;
+        }
+
+        .dashed-border-frame::after {
+            content: '';
+            position: absolute;
+            inset: -10px;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 1.25rem;
+            transform: rotate(1.5deg);
+            pointer-events: none;
+        } */
+
+        /* Stylish Dashed Outer Border Frame */
+        .dashed-border-frame {
+            position: relative;
+            transition: transform 0.5s ease, border-color 0.5s ease;
+        }
+
+        .dashed-border-frame::before {
+            content: '';
+            position: absolute;
+            inset: -10px;
+            border: 2px dashed #6366f1;
+            border-radius: 1.25rem;
+            transform: rotate(-2deg);
+            opacity: 0.7;
+            pointer-events: none;
+            transition: transform 0.6s ease, opacity 0.3s ease;
+        }
+
+        .dashed-border-frame:hover::before {
+            transform: rotate(0deg) scale(1.02);
+            opacity: 1;
+        }
+
+        .dashed-border-frame::after {
+            content: '';
+            position: absolute;
+            inset: -10px;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 1.25rem;
+            transform: rotate(1.5deg);
+            pointer-events: none;
+            transition: transform 0.6s ease;
+        }
+
+        /* Hero Floating Animation Keyframes */
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* --------------------------------------- hero-section ------------------------------------------------------ */
+        a:hover{
+            color: white;
+        }
+        .hero-btn1:hover{
+            background-color: rgba(132, 52, 212, 0.866);
+            border: 1px solid white;
+            box-shadow: 2px 2px 30px rgba(255, 255, 255, 0.812);
+        }
+        .hero-btn2:hover{
+            border: 1px solid white;
+            box-shadow: 2px 2px 30px rgba(255, 255, 255, 0.812);
+        }
+
+        /* Photo Glow Shadows */
+        .photo {
+            box-shadow: 3px 3px 35px indigo, 5px 5px 55px rgba(128, 0, 130, 0.753), 5px 5px 105px rgba(243, 182, 244, 0.385);
+            transition: box-shadow 0.4s ease, transform 0.4s ease;
+        }
+
+        .photo:hover {
+            box-shadow: 5px 5px 45px rgba(99, 102, 241, 0.9), 8px 8px 65px rgba(128, 0, 130, 0.9), 8px 8px 120px rgba(243, 182, 244, 0.5);
+        }
+
+        /* ------------------------------------------- about-section -------------------------------------------------------- */
+        .about-card{
+            box-shadow: 3px 3px 35px indigo,5px 5px 55px rgba(128, 0, 130, 0.753),5px 5px 105px rgba(243, 182, 244, 0.385);
+        }
+
+        /* Card Hover Effects */
+        .a-card{
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .a-card:hover {
+            background-image: radial-gradient(circle,rgba(130, 0, 126, 0.46),rgba(76, 0, 130, 0.841));
+            transform: translateY(-5px) scale(1.02);
+            border-color: #6366f1;
+            box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.25);
+        }
+
+        .skill-card-1:hover{
+            transform: translateY(-10px);
+            border: 1px solid rgba(255, 255, 255, 0.813);
+            box-shadow: 2px 2px 35px rgba(76, 0, 130, 0.812),3px 3px 35px rgba(128, 0, 130, 0.391),4px 4px 85px rgba(243, 182, 244, 0.293);
+        }
